@@ -31,8 +31,11 @@ def ceaser(start_text, shift_amount, cipher_direction):
     cipher_text = ''
     plain_text = ''
     for letter in start_text:
+
         # check and shift letters in the allphabet list
+
         if letter in alphabet:
+            # getting the current index of the letter in the alphabet list
             position = alphabet.index(letter)
             if cipher_direction == 'encode':
                 new_position = (position + shift_amount) % 26
